@@ -10,12 +10,12 @@ class LanguageChangeSwitch extends StatelessWidget {
     return ListTile(
       title: Text(context.localization.selectLanguage),
       trailing: DropdownMenu<Locale>(
-          dropdownMenuEntries: eStore.languageController.supportedLocals.map((locale){
+          dropdownMenuEntries: EStore.languageController.supportedLocals.map((locale){
             return DropdownMenuEntry(
                 value: locale , label: locale.languageCode);
           }).toList(),
           onSelected: (Locale ? locale){
-             eStore.languageController.changeLocal(locale!);
+             EStore.languageController.changeLocal(locale!);
           },
       ),
     );

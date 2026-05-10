@@ -7,16 +7,16 @@ import 'package:get/get.dart';
 
 import '../features/auth/presentation/screens/splash_screen.dart';
 
-class eStore extends StatefulWidget {
-  const eStore({super.key});
+class EStore extends StatefulWidget {
+  const EStore({super.key});
 
   static final LanguageController languageController = LanguageController();
 
   @override
-  State<eStore> createState() => _eStoreState();
+  State<EStore> createState() => _EStoreState();
 }
 
-class _eStoreState extends State<eStore> {
+class _EStoreState extends State<EStore> {
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   static FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
 
@@ -25,7 +25,7 @@ class _eStoreState extends State<eStore> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init: eStore.languageController,
+      init: EStore.languageController,
       builder: (languageController) {  // local instance
         return MaterialApp(
           navigatorObservers: <NavigatorObserver>[observer],
